@@ -1,0 +1,32 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	margin: 10px 5px;
+	position: relative;
+}
+
+a {
+  color: #8A153A;
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+	text-decoration: none;
+  width: 0;
+  height: 2px;
+  bottom: 0; /* can use transform : trnslateY() to position the underline */
+  left: 0;
+  background-color: #8A153A;
+  transition: width 0.5s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
