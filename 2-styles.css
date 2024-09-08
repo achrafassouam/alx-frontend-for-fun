@@ -1,0 +1,86 @@
+body {
+	font-family: sans-serif;
+}
+
+/* General toggle switch styles */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 30px; 
+	margin: 30px;
+}
+
+.toggle-cb {
+  display: none;
+}
+
+/* Toggle switch container */
+.toggle-label {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  border-radius: 15px;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+/* The inner part of the toggle */
+.toggle-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+/* The round switch */
+.toggle-switch {
+  position: absolute;
+  top: -5px; 
+  left: -5px; 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  background-color: #fff;
+  transition: left 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Checked state */
+.toggle-cb:checked + .toggle-label .toggle-switch {
+  left: 50px;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner {
+  background-color: #cf2a46;;
+}
+
+
+.toggle-cb:checked + .toggle-label::before {
+  content: 'Yes';
+  color: white;
+  font-size: 18px;
+  position: absolute; 
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+	z-index: 1;
+}
+
+/* Unchecked state */
+.toggle-cb:not(:checked) + .toggle-label::before {
+  content: 'No';
+  color: #999;
+  font-size: 18px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+	z-index: 1;
+}
