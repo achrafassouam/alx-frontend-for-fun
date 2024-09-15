@@ -1,0 +1,15 @@
+/* assigns margin left and right to body and div, using mixin */
+
+@mixin margin-x($left, $right) {
+	margin-left: $left;
+	margin-right: $right;
+}
+
+body {
+	@include margin-x(10px, 10px);
+}
+
+div {
+	 @include margin-x(15px, 15px);
+}
+
