@@ -1,0 +1,10 @@
+/* assings text color, #3D3D3D to body, #FF0000 to .red that are first child to body */
+
+body {
+	color: #3D3D3D;
+
+	> .red  {
+		color: #FF0000;
+	}
+}
+
