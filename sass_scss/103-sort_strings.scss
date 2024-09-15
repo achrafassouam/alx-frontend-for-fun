@@ -1,0 +1,12 @@
+/* Sass file that sorts the variable $list_to_sort and prints the sorted list in the debug output  */
+
+@import '103-sort_list';
+
+@function sort-list($list) {
+	@return sort($list);
+}
+
+$sorted_list: sort-list($list_to_sort);
+
+@debug $sorted_list;
+
